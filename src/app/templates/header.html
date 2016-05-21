@@ -1,0 +1,42 @@
+<div class="header_fixed">
+  <nav class="navbar navbar-default navbar-fixed-top nav_bar" role="navigation" ng-init="navCollapsed = true">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" ng-click="navCollapsed = !navCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand">
+        <img src="assets/images/ghmc-logo.jpg" alt="" class="header_logo"/>
+      </div>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+      <div class="nav navbar-nav padding-top color_EFD7AD">
+        <h3>Hyderabad Smart Data System</h3>
+        <h5 class="margin_top_zero">{{headerTitle}}</h5>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" dropdown>
+          <a href="#" class="dropdown-toggle menu_icon" dropdown-toggle data-toggle="dropdown"><b
+            class="glyphicon glyphicon-menu-hamburger"></b></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="ministry-of-interior">Citizen Services</a></li>
+            <li><a ui-sref="ministry-of-energy">Department of Energy</a></li>
+            <li><a>Department of Health</a></li>
+             <li><a>Department of Water Supply And Sewerage</a></li>
+            <li><a href="http://52.31.167.195:5601/#/dashboard/Twitter-Sentiment-DashBoard?_g=()&_a=(filters:!(),panels:!((col:1,id:PIE-Sentiment-Language,row:9,size_x:5,size_y:4,type:visualization),(col:6,id:Trending-HashTags,row:9,size_x:7,size_y:4,type:visualization),(col:5,id:QuarterHourly-Analysis,row:1,size_x:8,size_y:4,type:visualization),(col:1,id:Total-Tweets,row:5,size_x:4,size_y:4,type:visualization),(col:1,id:Sentiments,row:1,size_x:4,size_y:4,type:visualization),(col:5,id:Ministry-Based-Sentiment,row:5,size_x:8,size_y:4,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),title:'Twitter%20Sentiment%20DashBoard')" target="_blank">Twitter Sentiment Analysis</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+
+</div>

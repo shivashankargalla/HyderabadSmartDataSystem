@@ -1,0 +1,287 @@
+body {
+  background-color: rgba(255, 255, 255, 0);
+  font-family: 'interface_regular' !important;
+}
+
+.highcharts-container {
+  svg > text:last-child {
+    display: none;
+  }
+}
+
+.header_fixed {
+  .dropdown-menu {
+    background-color: rgba(97, 82, 52, 0.73);
+    li {
+      a {
+        color: #dddddd;
+      }
+    }
+  }
+
+  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #FFF;
+    background-color: #383023;
+  }
+}
+
+.navbar-brand {
+  cursor: pointer;
+}
+
+.highcharts-background {
+  opacity: 0.8;
+}
+
+.menu_icon {
+  padding-top: 30px !important;
+  padding-right: 30px !important;
+  .glyphicon-menu-hamburger {
+    font-size: 28px;
+  }
+}
+
+.navbar, .navbar-header {
+  margin-bottom: 0;
+  min-height: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid rgba(238, 238, 238, 0);
+  border-radius: 0;
+  .navbar-brand {
+    padding: 15px 20px 15px 40px;
+  }
+}
+
+.nav_bar {
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)); /*Fx 3.6-15*/
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)); /*Standard*/
+  .header_logo {
+    width: 120px;
+    height: 80px;
+    border-radius: 5px;
+  }
+}
+
+.header_fixed {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #FFFFFF;
+  width: 100%;
+  display: block;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)); /*Fx 3.6-15*/
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)); /*Standard*/
+  .dropdown-toggle {
+    color: #FFFFFF !important;
+  }
+  .navbar-nav > .open > a {
+    background-color: transparent !important;
+  }
+}
+
+.footer_fixed {
+  height: 60px;
+  color: #FFFFFF;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /*Standard*/
+  .col {
+    height: 60px;
+    padding-top: 20px;
+  }
+  .col:hover {
+    //box-shadow: 0px 0px 5px 2px #e4e7e8;
+    div {
+      font-weight: bold;
+      color: #EFD7AD;
+    }
+  }
+  .col-sm-12 {
+    .col:not(:last-child) {
+      border-right: 1px solid #888;
+    }
+  }
+}
+
+.footer_home {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.main_container {
+  padding-top: 120px !important;
+  padding-bottom: 20px !important;
+}
+
+.bg_image:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("../assets/images/hyd.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.dashboard_container {
+  .row-1 {
+    padding: 10px 15px 20px 15px;
+    .col {
+      height: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background-color: rgba(0, 0, 0, 0.5);
+      .data {
+        text-align: center;
+        color: #fff;
+        padding-top: 20px;
+        .description {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .value {
+          font-size: 28px;
+          font-weight: bold;
+        }
+      }
+    }
+    .col:hover {
+      box-shadow: 0px 0px 1px 2px #f5f5f5;
+    }
+  }
+}
+
+.login_container {
+  padding-top: 150px !important;
+  .panel-default {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.4);;
+  }
+}
+
+.home_container {
+  padding-top: 20px;
+  //padding-bottom: 30px;
+  min-height: 90vh;
+  div {
+    height: 60px;
+    margin-bottom: 10px;
+    .col_content {
+      font-size: 18px;
+      color: #FFFFFF;
+      border-radius: 2px;
+      background-color: rgba(0, 0, 0, 0.65);
+      div {
+        padding-top: 15px;
+        color: #FFFFFF;
+      }
+    }
+    .col_content:hover {
+      box-shadow: 0px 0px 1px 2px #f5f5f5;
+    }
+  }
+  .ministry_of_interiors, .ministry_of_energy {
+    img {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      /*-webkit-filter: blur(2px);
+      -moz-filter: blur(2px);
+      -o-filter: blur(2px);
+      -ms-filter: blur(2px);
+      filter: blur(2px);*/
+    }
+  }
+  .section_details {
+    border: 1px solid black;
+    height: auto;
+    max-height: 60vh;
+    background-color: rgba(0, 0, 0, 0.60);
+    padding: 10px;
+    color: #FFFFFF;
+    overflow-y: scroll;
+  }
+}
+
+.pie_filter {
+  li {
+    background-color: #dddddd;
+    color: #555555;
+    padding: 10px;
+    margin-right: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .activeTab {
+    background-color: rgba(255, 255, 255, 0.80);
+    color: #000000;
+    font-weight: bold;
+  }
+}
+
+.energy_table {
+  background-color: #000;
+  opacity: 0.75;
+  color: #fff;
+  th {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  tr:hover {
+    color: #000000;
+  }
+}
+
+.tenant_certificate_modal {
+  .tenant_sections {
+    .tenant_section {
+      margin-top: 20px;
+      border: 1px solid #dddddd;
+      border-radius: 2px;
+      .heading {
+        background-color: #dddddd;
+        padding: 5px 10px;
+      }
+      .body {
+        padding-top: 5px;
+        padding-left: 10px;
+        .col-sm-6, .col-sm-3, .col-sm-12 {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.contract_number {
+  padding: 10px 10px 10px 0;
+  font-size: 14px;
+}
+
+.color_EFD7AD {
+  color: #FFFFFF;
+}
+
+@font-face {
+  font-family: 'interface_regular';
+  src: url('../app/css/fonts/interface-dama.woff');
+}

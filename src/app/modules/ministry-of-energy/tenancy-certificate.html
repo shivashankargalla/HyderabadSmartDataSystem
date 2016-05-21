@@ -1,0 +1,170 @@
+<div class="tenant_certificate_modal">
+  <div class="details_modal">
+    <div class="modal-header">
+      <h4 class="modal-title uppercase text-center">
+        <img src="assets/images/tenancy_certificate.png" alt=""/>
+      </h4>
+    </div>
+    <div class="modal-body">
+      <div class="tenant_sections">
+        <div class="contract_number">Contract Number : {{tenantDetails.land.hits[0]._source['Contract No']}}</div>
+        <div class="tenant_section clearfix margin_top_zero">
+          <div class="heading">Owner</div>
+          <div class="body">
+            <div class="col-sm-12">
+              <div class="col-sm-12">
+                <div class="col-sm-3">Owner Name</div>
+                <div class="col-sm-3">ABCDEFGH</div>
+              </div>
+              <div class="col-sm-12">
+                <div class="col-sm-3">Owner Number</div>
+                <div class="col-sm-3">123456</div>
+              </div>
+              <div class="col-sm-12">
+                <div class="col-sm-3">Nationality</div>
+                <div class="col-sm-3">Dubai</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tenant_section clearfix">
+          <div class="heading">Tenancy Contract Details</div>
+          <div class="body">
+            <div class="col-sm-12">
+              <div class="col-sm-6">
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Starting Date</div>
+                  <div class="col-sm-6">{{tenantDetails.interior.hits[0]._source.timestamp | date : 'dd/MMM/yyyy'}}
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Contract Amount</div>
+                  <div class="col-sm-6">12345678</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Actual Contract Amount</div>
+                  <div class="col-sm-6">12345678</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Ending Date</div>
+                  <div class="col-sm-6">12-12-2016</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Security Deposit</div>
+                  <div class="col-sm-6">12345678</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Annual Contract Amount</div>
+                  <div class="col-sm-6">12345678</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tenant_section clearfix">
+          <div class="heading">Tenant</div>
+          <div class="body">
+            <div class="col-sm-12">
+              <div class="col-sm-6">
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Tenant Name</div>
+                  <div class="col-sm-6">{{tenantDetails.interior.hits[0]._source.name}}</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Tenant No</div>
+                  <div class="col-sm-6">12345678</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Passport/Expiry</div>
+                  <div class="col-sm-6">Jan - 2017</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Visa No & Expiry</div>
+                  <div class="col-sm-6">Jan - 2016</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">DED I.A. No.</div>
+                  <div class="col-sm-6">12345678</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Nationality</div>
+                  <div class="col-sm-6">{{tenantDetails.interior.hits[0]._source.Nationality}}</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Emirates ID</div>
+                  <div class="col-sm-6">{{tenantDetails.interior.hits[0]._source.AllotMentNumber}}</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Mobile No</div>
+                  <div class="col-sm-6">12345678</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tenant_section clearfix">
+          <div class="heading">Leased unit (Unit)</div>
+          <div class="body">
+            <div class="col-sm-12">
+              <div class="col-sm-6">
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Building Name/No</div>
+                  <div class="col-sm-6">Building Name - 1</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Land Area</div>
+                  <div class="col-sm-6">12345678</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Land DM No(Affection plan)</div>
+                  <div class="col-sm-6">12345678</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="col-sm-12">
+                  <div class="col-sm-6">Plot Number</div>
+                  <div class="col-sm-6">12345678</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tenant_section clearfix">
+          <div class="heading">Receipt Details</div>
+          <div class="body">
+            <div class="col-sm-12">
+              <div class="col-sm-12">
+                <div class="col-sm-6">Receipt Number</div>
+                <div class="col-sm-6">12345678</div>
+              </div>
+              <div class="col-sm-12">
+                <div class="col-sm-6">Certificate Registration Fee</div>
+                <div class="col-sm-6">12345</div>
+              </div>
+              <div class="col-sm-12">
+                <div class="col-sm-6">Knowledge Fee</div>
+                <div class="col-sm-6">12345</div>
+              </div>
+              <div class="col-sm-12">
+                <div class="col-sm-6">Typing Center fees</div>
+                <div class="col-sm-6">12345</div>
+              </div>
+              <div class="col-sm-12 font_bold">
+                <div class="col-sm-6">Total Fees</div>
+                <div class="col-sm-6">123456</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+  </div>
+</div>

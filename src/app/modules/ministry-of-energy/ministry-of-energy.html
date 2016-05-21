@@ -1,0 +1,126 @@
+<div class="bg_image">
+  <div ng-include="'app/templates/header.html'"></div>
+  <div class="main_container dashboard_container">
+    <div class="container">
+      <h3 class="color_ff margin_top_zero">Average Energy Consumption by Sector</h3>
+
+      <div class="row row-1">
+        <div class="col col-sm-3">
+          <div class="data">
+            <div class="description">Residential</div>
+            <div class="value">{{metric.residential.value.toFixed(2)}}</div>
+          </div>
+        </div>
+        <div class="col col-sm-3">
+          <div class="data">
+            <div class="description">Government</div>
+            <div class="value">{{metric.govt.value.toFixed(2)}}</div>
+          </div>
+        </div>
+        <div class="col col-sm-3">
+          <div class="data">
+            <div class="description">Industrial</div>
+            <div class="value">{{metric.industrial.value.toFixed(2)}}</div>
+          </div>
+        </div>
+        <div class="col col-sm-3">
+          <div class="data">
+            <div class="description">Commercial</div>
+            <div class="value">{{metric.commercial.value.toFixed(2)}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="container1" style="width:100%; height:350px;"></div>
+        </div>
+      </div>
+      <div class="row padding_top_20px">
+        <div class="col-sm-12">
+          <div id="container2" style="width:100%; height:350px;"></div>
+        </div>
+      </div>
+      <div class="row padding_top_20px">
+        <h4 class="color_ff">Top 10 Residential Energy Consumers</h4>
+        <table class="table table-hover energy_table">
+          <tr>
+            <th>Meter Number</th>
+            <th>Premise Number</th>
+            <th>Contract Number</th>
+            <th>Consumption</th>
+          </tr>
+          <tr ng-repeat="data in allSearchData.hits track by $index" ng-click="showDetails(data._source)">
+            <td>{{data._source.meterNumber}}</td>
+            <td>{{data._source.PremiseNumber}}</td>
+            <td>{{data._source.contractNumber}}</td>
+            <td>{{data._source.consumption}}</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <div ng-include="'app/templates/footer.html'"></div>
+</div>
+<script>
+    $(function () {
+        $('#container1').highcharts({
+
+            chart: {
+                type: 'column'
+            },
+
+            title: {
+                text: 'Total Energy Consumption, Grouped By Category'
+            },
+
+            xAxis: {
+                categories: ['Residential', 'Industrial', 'Government', 'Commercial']
+            },
+
+            yAxis: {
+                allowDecimals: false,
+                min: 0,
+                title: {
+                    text: 'Number of MUs'
+                }
+            },
+
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.x + '</b><br/>' +
+                            this.series.name + ': ' + this.y + '<br/>' +
+                            'Total: ' + this.point.stackTotal;
+                }
+            },
+
+            plotOptions: {
+                column: {
+                    stacking: 'normal'
+                }
+            },
+
+            series: [{
+                name: 'HYDERABAD CENTRAL CIRCLE',
+                data: [5, 3, 4, 7],
+                stack: 'male'
+            }, {
+                name: 'HYDERABAD SOUTH CIRCLE',
+                data: [3, 4, 4, 2],
+                stack: 'male'
+            }, {
+                name: 'HYDERABAD NORTH CIRCLE',
+                data: [2, 5, 6, 2],
+                stack: 'female'
+            }, {
+                name: 'HYDERABAD EAST CIRCLE',
+                data: [3, 0, 4, 4],
+                stack: 'female'
+            }]
+        });
+    });
+</script>

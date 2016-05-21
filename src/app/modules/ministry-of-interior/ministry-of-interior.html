@@ -1,0 +1,109 @@
+<div class="bg_image">
+  <div ng-include="'app/templates/header.html'"></div>
+  <div class="main_container dashboard_container">
+    <div class="container">
+      <h3 class="color_ff margin_top_zero">Average Response Time(Days) for Citizen Services</h3>
+
+      <div class="row row-1">
+        <div class="col col-sm-3">
+          <div class="data">
+            <div class="description">Aadhar Card</div>
+            <div class="value">{{metric.eid.value.toFixed(2)}}</div>
+          </div>
+        </div>
+        <div class="col col-sm-3">
+          <div class="data">
+            <div class="description">Ration Card</div>
+            <div class="value">{{metric.residencyEntry.value.toFixed(2)}}</div>
+          </div>
+        </div>
+        <div class="col col-sm-3">
+          <div class="data">
+            <div class="description">CPDCL New Connection </div>
+            <div class="value">{{metric.workEntry.value.toFixed(2)}}</div>
+          </div>
+        </div>
+        <div class="col col-sm-3">
+          <div class="data">
+            <div class="description">Birth/Death Certificate</div>
+            <div class="value">{{metric.telephone.value.toFixed(2)}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="container1" style="width:100%; height:350px;"></div>
+        </div>
+      </div>
+      <div class="row padding_top_20px">
+        <div class="col-sm-12">
+          <ul class="nav nav-tabs pie_filter">
+            <li role="presentation" ng-class="{'activeTab':(activePieTab == 1)}" ng-click="changePieTab(1,'EID')">Aadhar </li>
+            <li role="presentation" ng-class="{'activeTab':(activePieTab == 2)}"
+                ng-click="changePieTab(2,'Work Entry Permit')">Ration Card
+            </li>
+            <li role="presentation" ng-class="{'activeTab':(activePieTab == 3)}"
+                ng-click="changePieTab(3,'Residency Entry Permit')">CPDCL New Connection
+            </li>
+            <li role="presentation" ng-class="{'activeTab':(activePieTab == 4)}" ng-click="changePieTab(4,'Telephone')">
+                Birth/Death Certificate
+            </li>
+          </ul>
+          <div id="container2" style="width:100%; height:350px;"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div ng-include="'app/templates/footer.html'"></div>
+</div>
+<script>
+    $(function () {
+        $('#container2').highcharts({
+            title: {
+                text: 'Monthly Average Applications',
+                x: -20 //center
+            },
+            /*subtitle: {
+                text: 'Source: WorldClimate.com',
+                x: -20
+            },*/
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: 'Number of Applications in Thousands'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: 'K'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'HYDERABAD EAST CIRCLE',
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+            }, {
+                name: 'HYDERABAD WEST CIRCLE',
+                data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+            }, {
+                name: 'HYDERABAD NORTH CIRCLE',
+                data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+            }, {
+                name: 'HYDERABAD SOUTH CIRCLE',
+                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            }]
+        });
+    });
+</script>
